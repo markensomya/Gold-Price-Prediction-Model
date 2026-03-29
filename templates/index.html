@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gold Price Predictor</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="header">
+        <span class="gold-icon">&#9670;</span>
+        <h1>Gold Price Predictor</h1>
+        <p>Enter market indicators to predict the GLD ETF price</p>
+      </div>
+
+      <form id="predict-form">
+        <div class="form-group">
+          <label for="spx">SPX — S&amp;P 500 Index</label>
+          <input type="number" id="spx" placeholder="e.g. 2700.5" step="any" required />
+        </div>
+        <div class="form-group">
+          <label for="uso">USO — Oil ETF Price</label>
+          <input type="number" id="uso" placeholder="e.g. 14.2" step="any" required />
+        </div>
+        <div class="form-group">
+          <label for="slv">SLV — Silver ETF Price</label>
+          <input type="number" id="slv" placeholder="e.g. 15.8" step="any" required />
+        </div>
+        <div class="form-group">
+          <label for="eurusd">EUR/USD — Exchange Rate</label>
+          <input type="number" id="eurusd" placeholder="e.g. 1.19" step="any" required />
+        </div>
+
+        <button type="submit">Predict Gold Price</button>
+      </form>
+
+      <div id="result" class="result hidden">
+        <p>Predicted GLD Price</p>
+        <h2 id="price-value">—</h2>
+      </div>
+
+      <div id="error" class="error hidden"></div>
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
